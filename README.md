@@ -23,27 +23,29 @@ Waiting time between 2 calls in 0.1 seconds: This is an integer value from 1. Pl
 
 Directory for saving the text files: By default, the text files are saved in the current directory. Here you can specify the directory in which the files are to be stored. The user under whom the program is started must have write access to this directory.
 
-Example # 1: An update should only be fetched and stored once. The update should be stored in the directory / home / pi /. The call looks like this:
-`` sh
+Example # 1: An update should only be fetched and stored once. The update should be stored in the directory /home/pi/. The call looks like this:
+```
 ./telegram_check_updates 123456: ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
-``
+```
 
 Example # 2: You should try to get updates and wait 5 seconds between calls. The same directory where the program is located should be used as the directory for storing the updates:
-`` sh
+```
 ./telegram_check_updates 10 5
-``
+```
 # Updates as text files
 
 The text files created by the program have these conventions for the name:
-`` sh
-<year><month> <day> _ <time> _ <random number with 4 digits> .txt
-``
+```
+<year><month><day>_<time>_<random number with 4 digits>.txt
+```
 The content of the file has 3 lines and looks like this:
-`` sh
+```
 Name: messages_from_chat
+ 
 Chat ID: <the ID of the chat>
+ 
 Message: <text that was entered in the chat>
-``
+```
 
 # How is the program created?
 
@@ -55,7 +57,7 @@ The program has only been tested on the Raspberry Pi. But it should also work on
 
 # Sample files
 
-The directory `` samples '' contains examples of what the files with the updates look like.
+The directory ```samples``` contains examples of what the files with the updates look like.
 
 # Outlook
 
@@ -86,21 +88,21 @@ Wartezeit zwischen 2 Abrufen in 0.1 Sekunden: Das ist ein ganzzahliger Wert ab 1
 Verzeichnis zum Abspeichern der Textdateien: Per Default werden die Textdateien im aktuellen Verzeichnis abgespeichert. Man kann hier angeben, in welchem Verzeichnis die Dateien abgelegt werden sollen. Für dieses Verzeichnis muss der User, unter dem das Programm gestartet wird, Schreibrechte haben.
 
 Beispiel #1: Es soll nur ein einziges Mal ein Updates geholt und abgelegt werden. Das Update soll im Verzeichnis /home/pi/ abgelegt werden. Der Aufruf sieht so aus:
-```sh
+```
 ./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
 ```
 Beispiel #2: Es soll mal versucht werden, Updates zu holen und zwischen den Aufrufen soll 5 Sekunden gewartet werden. Als Verzeichnis zum Ablegen der Updates soll das gleiche Vereichnis genutzt werden, wo das Programm selbst liegt:
-```sh
+```
 ./telegram_check_updates 10 5
 ```
 # Updates als Textdateien
 
 Die Textdateien, die das Programm anlegt, haben diese Konventionen für den Namen:
-```sh
+```
 <Jahr><Monat><Tag>_<Uhrzeit>_<Zufallszahl mit 4 Stellen>.txt
 ```
 Der Inhalt der Datei hat 3 Zeilen sieht wie folgt aus:
-```sh
+```
 Name: messages_from_chat
 Chat-ID: <die ID des Chats>
 Message: <Text, der im Chat eingegeben wurde>
