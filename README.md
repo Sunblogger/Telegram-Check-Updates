@@ -1,4 +1,4 @@
-German version [below](#deutsche-version)
+German version [below](#deutsche-version).
 
 # Purpose of the program
 
@@ -25,7 +25,7 @@ Directory for saving the text files: By default, the text files are saved in the
 
 Example # 1: An update should only be fetched and stored once. The update should be stored in the directory / home / pi /. The call looks like this:
 `` sh
-./telegram_check_updates 123456: ABCDEFGE_gjklpoiuztr 1 1 / home / pi /
+./telegram_check_updates 123456: ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
 ``
 Example # 2: You should try to get updates and wait 5 seconds between calls. The same directory where the program is located should be used as the directory for storing the updates:
 `` sh
