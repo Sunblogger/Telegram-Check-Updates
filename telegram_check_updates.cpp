@@ -369,4 +369,4 @@ if (0 == check_program_parameters(argc, (const char **)argv, &url_string)) {	// 
 	}
 }
 
-}	// end of main_
+}	// end of main
