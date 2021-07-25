@@ -8,7 +8,7 @@ The program is designed so that it can run as a daemon (systemd service).
 # How does the program work?
 
 The program uses a chat ID and a token from a bot to read updates from Telegram and then save them as a text file. The updates come back from Telegram as JSON results and text files are then built from these JSON results. After querying the updates, Telegram is informed by means of an update counter which update ID was queried last so that Telegram deletes all old updates.
-While the program is running, various information is recorded in a log file. This log file can be helpful when looking for errors. The log file has the same name as the program and has the extension `` .log ''.
+While the program is running, various information is recorded in a log file. This log file can be helpful when looking for errors. The log file has the same name as the program and has the extension ```.log```.
 
 # Parameters
 In order to use the program, these parameters must be given with the call:
@@ -25,12 +25,12 @@ Directory for saving the text files: By default, the text files are saved in the
 
 Example # 1: An update should only be fetched and stored once. The update should be stored in the directory /home/pi/. The call looks like this:
 ```
-./telegram_check_updates 123456: ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
+./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
 ```
 
-Example # 2: You should try to get updates and wait 5 seconds between calls. The same directory where the program is located should be used as the directory for storing the updates:
+Example # 2: You should try 10 times to get updates and wait 5 seconds between calls. The same directory where the program is located should be used as the directory for storing the updates:
 ```
-./telegram_check_updates 10 5
+./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 10 50
 ```
 # Updates as text files
 
@@ -91,9 +91,9 @@ Beispiel #1: Es soll nur ein einziges Mal ein Updates geholt und abgelegt werden
 ```
 ./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
 ```
-Beispiel #2: Es soll mal versucht werden, Updates zu holen und zwischen den Aufrufen soll 5 Sekunden gewartet werden. Als Verzeichnis zum Ablegen der Updates soll das gleiche Vereichnis genutzt werden, wo das Programm selbst liegt:
+Beispiel #2: Es soll 10 mal versucht werden, Updates zu holen und zwischen den Aufrufen soll 5 Sekunden gewartet werden. Als Verzeichnis zum Ablegen der Updates soll das gleiche Vereichnis genutzt werden, wo das Programm selbst liegt:
 ```
-./telegram_check_updates 10 5
+./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 10 50
 ```
 # Updates als Textdateien
 
