@@ -27,6 +27,7 @@ Example # 1: An update should only be fetched and stored once. The update should
 `` sh
 ./telegram_check_updates 123456: ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
 ``
+
 Example # 2: You should try to get updates and wait 5 seconds between calls. The same directory where the program is located should be used as the directory for storing the updates:
 `` sh
 ./telegram_check_updates 10 5
