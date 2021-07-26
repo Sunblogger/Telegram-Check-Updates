@@ -61,7 +61,7 @@ The directory ```samples``` contains examples of what the files with the updates
 
 # Outlook
 
-The program will be integrated into my program message2action. With this integration, there is no need to store and read in text files. It is then possible to process the data in the memory. 
+The program will be integrated into my program [message2action](https://github.com/Sunblogger/message2action). With this integration, there is no need to store and read in text files. It is then possible to process the data in the memory. 
 # Deutsche Version
 
 # Zweck des Programms
@@ -122,4 +122,4 @@ Im Verzeichnis ```samples``` sind Beispiele abgelegt, wie die Dateien mit den Up
 
 # Ausblick
 
-Das Programm wird in mein Programm message2action integriert werden. Mit dieser Integration wird auf das Ablegen und Einlesen von Textdateien verzichtet. Es ist dann eine Verarbeitung der Daten im Speicher möglich.
+Das Programm wird in mein Programm [message2action](https://github.com/Sunblogger/message2action) integriert werden. Mit dieser Integration wird auf das Ablegen und Einlesen von Textdateien verzichtet. Es ist dann eine Verarbeitung der Daten im Speicher möglich.
