@@ -13,17 +13,17 @@ While the program is running, various information is recorded in a log file. Thi
 # Parameters
 In order to use the program, these parameters must be given with the call:
 
-Chat ID + token of the bot: The chat ID is given together with the token of the bot. Both values ​​are separated with a colon ':'.
+Chat ID + token of the bot: The chat ID is given together with the token of the bot. Both values are separated with a colon ':'.
  
 Number of repetitions of the call: If the value = 0, the call is repeated until the program is stopped. The program can be stopped as follows:
-a) The program regularly searches for a so-called stop file. If the program finds this stop file, it will terminate. The stop file has the same name as the executable program plus a '.stop' suffix. This file can easily be created with a touch command: touch /home/pi/telegram_check_updates/telegram_check_updates.stop
+a) The program regularly searches for a so-called stop file. If the program finds this stop file, it will terminate. The stop file has the same name as the executable program plus a ```.stop``` suffix. This file can easily be created with a touch command: ```touch /home/pi/telegram_check_updates/telegram_check_updates.stop```
 b) The simple but not so nice variant is to press Ctrl-C.
 
 Waiting time between 2 calls in 0.1 seconds: This is an integer value from 1. Please note that the program does not make a new call exactly after the specified waiting time, but only "sleeps" this waiting time after processing a call. This was easier to implement than having to wait an exact wait regardless of the processing.
 
 Directory for saving the text files: By default, the text files are saved in the current directory. Here you can specify the directory in which the files are to be stored. The user under whom the program is started must have write access to this directory.
 
-Example # 1: An update should only be fetched and stored once. The update should be stored in the directory /home/pi/. The call looks like this:
+Example # 1: An update should only be fetched and stored once. The update should be stored in the directory ```/home/pi/```. The call looks like this:
 ```
 ./telegram_check_updates 123456:ABCDEFGE_gjklpoiuztr 1 1 /home/pi/
 ```
@@ -49,8 +49,8 @@ Message: <text that was entered in the chat>
 
 # How is the program created?
 
-The program is written in C ++. The make file called makefile can be used to create an executable program from the source code.
-Note that this program uses C ++ classes I created that I built for general purposes. These classes are also used in other programs. I have these C ++ classes in the / home / pi / cpp_sources directory. The makefile also looks for these classes in it.
+The program is written in C++. The make file called makefile can be used to create an executable program from the source code.
+Note that this program uses C++ classes I created that I built for general purposes. These classes are also used in other programs. I have these C++ classes in the ```/home/pi/cpp_sources``` directory. The makefile also looks for these classes in it.
 The current version of the files is stored in the repository.
 
 The program has only been tested on the Raspberry Pi. But it should also work on another Linux.
@@ -61,7 +61,7 @@ The directory ```samples``` contains examples of what the files with the updates
 
 # Outlook
 
-The program will be integrated into my program message2action. With this integration, there is no need to store and read in text files. It is then possible to process the data in the memory. 
+The program will be integrated into my program [message2action](https://github.com/Sunblogger/message2action). With this integration, there is no need to store and read in text files. It is then possible to process the data in the memory. 
 # Deutsche Version
 
 # Zweck des Programms
@@ -122,4 +122,4 @@ Im Verzeichnis ```samples``` sind Beispiele abgelegt, wie die Dateien mit den Up
 
 # Ausblick
 
-Das Programm wird in mein Programm message2action integriert werden. Mit dieser Integration wird auf das Ablegen und Einlesen von Textdateien verzichtet. Es ist dann eine Verarbeitung der Daten im Speicher möglich.
+Das Programm wird in mein Programm [message2action](https://github.com/Sunblogger/message2action) integriert werden. Mit dieser Integration wird auf das Ablegen und Einlesen von Textdateien verzichtet. Es ist dann eine Verarbeitung der Daten im Speicher möglich.
