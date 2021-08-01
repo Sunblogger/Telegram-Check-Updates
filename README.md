@@ -111,7 +111,7 @@ Message: <Text, der im Chat eingegeben wurde>
 # Wie wird das Programm erstellt?
 
 Das Programm ist in C++ geschrieben. Um aus dem Quelltext ein ausführbares Programm zu erzeugen, kann die Make-Datei namens makefile genutzt werden.
-Beachte, dass dieses Programm von mir erstellte C++-Klassen nutzt, die ich für allgemeine Zwecke aufgebaut habe. Diese Klassen werden auch in anderen Programmen benutzt. Diese C++-Klassen liegen bei mir im Verzeichnis /home/pi/cpp_sources. Das makefile sucht darin auch diese Klassen.
+Beachte, dass dieses Programm von mir erstellte C++-Klassen nutzt, die ich für allgemeine Zwecke aufgebaut habe. Diese Klassen werden auch in anderen Programmen benutzt. Diese C++-Klassen liegen bei mir im Verzeichnis ```/home/pi/cpp_sources```. Das makefile sucht darin auch diese Klassen.
 Die aktuelle Fassung der Dateien ist im Repository abgelegt. 
 
 Das Programm ist nur auf dem Raspberry Pi getestet worden. Es sollte aber auch auf einem anderem Linux funktionieren.
