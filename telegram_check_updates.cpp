@@ -1,7 +1,7 @@
 /*
  telegram_check_updates.cpp
- Version: 0.2
- Date: 23.04.2021
+ Version: 0.3
+ Date: 19.08.2021
   
  * Copyright 2021 
  * 
@@ -29,7 +29,7 @@
 
 // #define DEVSTAGE	// we are in development-stage: we print some more messages on screen than desired in production release
 
-const std::string version_of_program = "0.2";
+const std::string version_of_program = "0.3";
 
 unsigned int number_of_cycles;	// how many times will we repeat to get updates?
 unsigned int wait_time_cycles;	// waittime before we get next update
@@ -320,7 +320,6 @@ stop_file_class stop_file((std::string)(argv[0]) + std::string(".stop"));	// one
 telegram_messageclass telegram_message(&logfile);	// one object to get and save the telegram data we need
 
 std::cout << "Telegram Check Updates for message2action, version " << version_of_program << std::endl;
-stop_file.set_logfile(&logfile);
 std::cout << "Filename for stopping program: " << stop_file.get_stopfile_name() << std::endl;
 
 logfile.addmessage(logfile_class::logentrytype::info, "Program started.");
@@ -335,7 +334,7 @@ if (0 == check_program_parameters(argc, (const char **)argv, &url_string)) {	// 
 			telegram_message.get_message_in_url_data();	// we extract the message which we received out of the received url-data
 			logfile.addmessage(logfile_class::logentrytype::info, "We sleep now.");
 			std::this_thread::sleep_for(std::chrono::milliseconds(100*wait_time_cycles));
-		} while (stop_file.check_stop_file(false) == stop_file.returncode::NO_STOP_FILE); 
+		} while (stop_file.check_stop_file() == stop_file.returncode::NO_STOP_FILE); 
 		logfile.addmessage(logfile_class::logentrytype::info, "Program finished.");
 		std::cout << "Program finished." << std::endl;   
 		return 0;
@@ -349,12 +348,13 @@ if (0 == check_program_parameters(argc, (const char **)argv, &url_string)) {	// 
 		logfile.addmessage(logfile_class::logentrytype::info, logentry);
 		
 		for (cycles_counter = 0; cycles_counter < number_of_cycles; ++cycles_counter) {
-			if (stop_file.check_stop_file(false) != stop_file.returncode::NO_STOP_FILE) { 	// if we have a stop-file then we have to stop our program
+			if (stop_file.check_stop_file() != stop_file.returncode::NO_STOP_FILE) { 	// if we have a stop-file then we have to stop our program
 				cycles_counter = number_of_cycles; 
+				logfile.addmessage(logfile_class::logentrytype::info, "We have detected a stop-file.");
 				#ifdef devstage
 				std::cout << "We have detected a stop-file." << std::endl; 
 				#endif 
-			} else {	// if we have not found a valid stop-file we stop here
+			} else {	// if we have not found a valid stop-file we continue
 				telegram_message.get_updates();
 				telegram_message.get_message_in_url_data();	// we extract the message which we received out of the received url-data
 			}
