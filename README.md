@@ -49,7 +49,7 @@ Message: <text that was entered in the chat>
 
 # How is the program created?
 
-The program is written in C++. The make file called makefile can be used to create an executable program from the source code.
+The program is written in C++. The make file called ```makefile``` can be used to create an executable program from the source code.
 Note that this program uses C++ classes I created that I built for general purposes. These classes are also used in other programs. I have these C++ classes in the ```/home/pi/cpp_sources``` directory. The makefile also looks for these classes in it.
 The current version of the files is stored in the repository.
 
@@ -110,7 +110,7 @@ Message: <Text, der im Chat eingegeben wurde>
 
 # Wie wird das Programm erstellt?
 
-Das Programm ist in C++ geschrieben. Um aus dem Quelltext ein ausführbares Programm zu erzeugen, kann die Make-Datei namens makefile genutzt werden.
+Das Programm ist in C++ geschrieben. Um aus dem Quelltext ein ausführbares Programm zu erzeugen, kann die Make-Datei namens ```makefile``` genutzt werden.
 Beachte, dass dieses Programm von mir erstellte C++-Klassen nutzt, die ich für allgemeine Zwecke aufgebaut habe. Diese Klassen werden auch in anderen Programmen benutzt. Diese C++-Klassen liegen bei mir im Verzeichnis ```/home/pi/cpp_sources```. Das makefile sucht darin auch diese Klassen.
 Die aktuelle Fassung der Dateien ist im Repository abgelegt. 
 
