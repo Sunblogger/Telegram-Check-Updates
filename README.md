@@ -53,7 +53,9 @@ The program is written in C++. The make file called ```makefile``` can be used t
 Note that this program uses C++ classes I created that I built for general purposes. These classes are also used in other programs. I have these C++ classes in the ```/home/pi/cpp_sources``` directory. The makefile also looks for these classes in it.
 The current version of the files is stored in the repository.
 The program uses libraries from ```curl``` and ```JSON```. In order to install these libraries, enter this commands:
+
 ```sudo apt-get install libcurl4-openssl-dev```
+
 ```sudo apt-get install libjsoncpp-dev```
 
 
@@ -118,7 +120,9 @@ Das Programm ist in C++ geschrieben. Um aus dem Quelltext ein ausführbares Prog
 Beachte, dass dieses Programm von mir erstellte C++-Klassen nutzt, die ich für allgemeine Zwecke aufgebaut habe. Diese Klassen werden auch in anderen Programmen benutzt. Diese C++-Klassen liegen bei mir im Verzeichnis ```/home/pi/cpp_sources```. Das makefile sucht darin auch diese Klassen.
 Die aktuelle Fassung der Dateien ist im Repository abgelegt.
 Das Programm nutzt die Bibliotheken von ```curl``` und ```JSON```. Um diese beiden Bibliotheken zu installieren, ist dies auszuführen:
+
 ```sudo apt-get install libcurl4-openssl-dev```
+
 ```sudo apt-get install libjsoncpp-dev```
 
 Das Programm ist nur auf dem Raspberry Pi getestet worden. Es sollte aber auch auf einem anderem Linux funktionieren.
