@@ -77,7 +77,7 @@ Während das Programm läuft, werden verschiedene Informationen in einer Log-Dat
 # Parameter 
 Um das Program zu nutzen, sind diese Parameter mit dem Aufruf mitzugeben:
 
-Chat-ID + Token des Bot: Die Chat-ID wird zusammen mit dem Token des Bot angegeben. Beide Werte werden mit einem Doppelpunkt ':' getrennt.
+```Chat-ID + Token des Bot```: Die Chat-ID wird zusammen mit dem Token des Bot angegeben. Beide Werte werden mit einem Doppelpunkt ':' getrennt.
  
 Anzahl an Wiederholungen des Abrufes: Bei einem Wert=0 wird so lange der Abruf wiederholt, bis das Programm gestoppt wird. Das Programm kann wie folgt gestoppt werden:
 a) Das Programm sucht regelmässig nache einer sogenannten Stop-Datei. Findet das Programm diese Stop-Datei, so beendet es sich. Die Stop-Datei heißt genauso wie das ausführbare Programm plus ein Suffix '.stop'. Diese Datei kann einfach mit einem touch-Befehl erzeugt werden: touch /home/pi/telegram_check_updates/telegram_check_updates.stop
