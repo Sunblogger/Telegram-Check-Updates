@@ -74,7 +74,7 @@ The program will be integrated into my program [message2action](https://github.c
 # Zweck des Programms
 
 Mit diesem Programm ist es möglich, Updates zu einem Telegram-Chat abzurufen und die Updates als einzelne Text-Dateien zu speichern. Die Textdateien geben dann den Inhalt des Chats wieder und in Telegram werden die Updates dann gelöscht. Updates können also nur einmal abgerufen und abgespeichert werden.
-Das Programm ist so ausgelegt, dass es als Daemon [systemd service](#systemd-service1) laufen kann.
+Das Programm ist so ausgelegt, dass es als Daemon [systemd service](#systemd-service-1) laufen kann.
 
 # Wie funktioniert das Programm?
 
