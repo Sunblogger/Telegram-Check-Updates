@@ -54,14 +54,17 @@ Note that this program uses C++ classes I created that I built for general purpo
 The current version of the files is stored in the repository.
 The program uses libraries from ```curl``` and ```JSON```. In order to install these libraries, enter this commands:\
 ```sudo apt-get install libcurl4-openssl-dev```\
-```sudo apt-get install libjsoncpp-dev```\
-
+```sudo apt-get install libjsoncpp-dev```
 
 The program has only been tested on the Raspberry Pi. But it should also work on another Linux.
 
 # Sample files
 
 The directory ```samples``` contains examples of what the files with the updates look like.
+
+# systemd-service
+
+In order to let the program run as a systemd-service you can use the file ```telegram_check_updates.service```.
 
 # Outlook
 
@@ -119,13 +122,17 @@ Beachte, dass dieses Programm von mir erstellte C++-Klassen nutzt, die ich für 
 Die aktuelle Fassung der Dateien ist im Repository abgelegt.
 Das Programm nutzt die Bibliotheken von ```curl``` und ```JSON```. Um diese beiden Bibliotheken zu installieren, ist dies auszuführen:\
 ```sudo apt-get install libcurl4-openssl-dev```\
-```sudo apt-get install libjsoncpp-dev```\
+```sudo apt-get install libjsoncpp-dev```
 
 Das Programm ist nur auf dem Raspberry Pi getestet worden. Es sollte aber auch auf einem anderem Linux funktionieren.
 
 # Beispieldateien
 
 Im Verzeichnis ```samples``` sind Beispiele abgelegt, wie die Dateien mit den Updates aussehen.
+
+# systemd-service
+
+Um das Program als systemd-Dienst zu nutzen, kann man die Datei ```telegram_check_updates.service``` nutzen.
 
 # Ausblick
 
