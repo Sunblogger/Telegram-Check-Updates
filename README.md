@@ -3,7 +3,7 @@ German version [below](#deutsche-version).
 # Purpose of the program
 
 With this program it is possible to call up updates to a Telegram chat and to save the updates as individual text files. The text files then reflect the content of the chat and the updates are then deleted in Telegram. Updates can therefore only be called up and saved once.
-The program is designed so that it can run as a daemon (systemd service).
+The program is designed so that it can run as a daemon [systemd service](#systemd-service).
 
 # How does the program work?
 
